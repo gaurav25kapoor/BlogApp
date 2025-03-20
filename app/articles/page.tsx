@@ -26,7 +26,7 @@ type SearchPageProps = {
 const ITEMS_PER_PAGE = 3; // Number of items per page
 
 const page: React.FC<SearchPageProps> = async ({ searchParams }) => {
-  const searchText = searchParams.search || "";
+  const searchText = await searchParams.search || "";
   const currentPage = Number(searchParams.page) || 1;
   const skip = (currentPage - 1) * ITEMS_PER_PAGE;
   const take = ITEMS_PER_PAGE;
