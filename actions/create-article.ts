@@ -17,7 +17,7 @@ cloudinary.config({
 const createArticleSchema=z.object({
   title:z.string().min(3).max(100),
   category:z.string().min(3).max(50),
-  content:z.string().min(10)
+  content:z.string().min(10)  
 })
 
 type CreateArticleFormState = {
